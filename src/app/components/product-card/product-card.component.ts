@@ -10,12 +10,18 @@ export class ProductCardComponent implements OnInit {
   public productOptions: string[] = ['small', 'medium', 'large'];
   public productPrice: number;
   public discount: number;
+  public availableQuantity: number = 3;
   constructor() {
   }
 
   ngOnInit(): void {
     this.productPrice = 250.00;
-    this.discount = 0.2;
+    this.discount = 0.6;
   }
 
+  public buyNow(): void {
+    if(this.availableQuantity) {
+      this.availableQuantity--;
+    }
+  }
 }

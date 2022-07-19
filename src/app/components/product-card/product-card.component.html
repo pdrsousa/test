@@ -19,10 +19,20 @@
 
       <span class="discount" *ngIf="discount">{{ discount | percent }}</span>
     </h3>
-    <button type="button" class="buy-button">{{ 'Buy now!' | uppercase }}</button>
+    <button type="button" class="buy-button" (click)="buyNow()" [disabled]="availableQuantity === 0">{{ 'Buy now!' | uppercase }}</button>
   </div>
 </div>
 
 <ng-template #oneSizeFitsAll>
   <p class="one-size-option">One size fits all</p>
 </ng-template>
+
+
+<div class="edit-section">
+  <h2>Edit product info</h2>
+  <label for="input-quantity">Change stock quantity:</label>
+  <input id="input-quantity" type="number" min="0" max="25" [(ngModel)]="availableQuantity">
+
+  <label for="input-discount">Change discount:</label>
+  <input id="input-discount" type="number" min="0.0" max="1" step="0.1" [(ngModel)]="discount">
+</div>

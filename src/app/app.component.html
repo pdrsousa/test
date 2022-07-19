@@ -9,6 +9,16 @@
   }
 </style>
 
+<header>
+  <picture class="logo">
+    <img src="https://www.wilson.com/sites/all/themes/wilson_base/images/wilson_w.svg">
+  </picture>
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/products">Products</a>
+  </nav>
+</header>
+
 <div class="content" role="main">
-  <app-product-card></app-product-card>
+  <router-outlet></router-outlet>
 </div>
