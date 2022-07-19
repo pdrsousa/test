@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  public productName: string = 'A2000 Infield Baseball Glove';
+  public productName: string = 'a2000 infield baseball glove';
   public productOptions: string[] = ['small', 'medium', 'large'];
   public productPrice: number;
   public discount: number;
